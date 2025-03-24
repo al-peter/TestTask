@@ -12,20 +12,22 @@ DEPENDPATH += D:/mavlink/common
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    main.cpp \
-    mainwindow.cpp \
-    mavlinkudp.cpp \
-    paramstorage.cpp
+    src/main.cpp \
+    src/mainwindow.cpp \
+    src/mavlinkudp.cpp \
+    src/paramstorage.cpp
 
 HEADERS += \
-    mainwindow.h \
-    mavlinkudp.h \
-    paramstorage.h
+    src/mainwindow.h \
+    src/mavlinkudp.h \
+    src/paramstorage.h
 
 FORMS += \
-    TestTaskMAV.ui
+    src/TestTaskMAV.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+
